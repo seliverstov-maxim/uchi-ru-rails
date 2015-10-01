@@ -1,0 +1,8 @@
+en:
+  activerecord:
+    errors:
+      models:
+        web/registration_user_type:
+          attributes:
+            email:
+              not_email_format: 'Not email format'

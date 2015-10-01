@@ -1,0 +1,6 @@
+= minimal_form_for user, url: user_path, defaults: { label: false } do |f|
+  = f.input :email
+  = f.input :password, as: :password
+  = f.input :password_confirmation
+  = f.submit t('.register'), class: 'btn btn-primary'
+  = link_to t('.login'), new_session_path, class: 'btn btn-default pull-right'

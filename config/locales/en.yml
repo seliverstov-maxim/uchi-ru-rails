@@ -1,0 +1,14 @@
+en:
+  web:
+    users:
+      form:
+        login: 'Login'
+        register: 'Register'
+    sessions:
+      form:
+        login: 'Login'
+        go_to_register: 'Register'
+  layouts:
+    superhero:
+      login: 'Login'
+      logout: 'Logout'
