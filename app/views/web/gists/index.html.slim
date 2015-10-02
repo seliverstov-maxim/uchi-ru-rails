@@ -1,0 +1,15 @@
+- @gists.each do |gist|
+  .col-xs-4
+    = link_to '#', class: 'gist-link' do
+      .panel.panel-default
+        .panel-body
+          .owner-pic
+            .img= 'pic'
+            / .img style="bacground-url: url(#{gist.owner.avatar.url})"
+          p.gist-name= gist.name
+          .clearfix
+          span.about_autor
+            = t('.signature', author: gist.owner.email)
+.clearfix
+.gists-pagination
+  = will_paginate @collection, renderer: BootstrapPagination::Rails, bootstrap: 3

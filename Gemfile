@@ -16,8 +16,10 @@ gem 'slim-rails'
 gem 'therubyracer'
 gem 'twitter-bootswatch-rails', '~> 3.3.4'
 gem 'twitter-bootswatch-rails-helpers'
+gem 'will_paginate-bootstrap'
 
 gem 'validates_email_format_of'
+gem 'enumerize'
 
 group :development, :test do
   gem 'byebug'

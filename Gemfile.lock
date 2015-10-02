@@ -71,6 +71,8 @@ GEM
       json
       thread
       thread_safe
+    enumerize (1.0.0)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     execjs (2.6.0)
     factory_girl (4.5.0)
@@ -238,6 +240,9 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    will_paginate (3.0.7)
+    will_paginate-bootstrap (1.0.1)
+      will_paginate (>= 3.0.3)
     wrong (0.7.1)
       diff-lcs (~> 1.2.5)
       predicated (~> 0.2.6)
@@ -252,6 +257,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
   capistrano-rails
+  enumerize
   factory_girl_rails
   i18n-tasks (~> 0.8.7)
   jbuilder (~> 2.0)
@@ -272,6 +278,7 @@ DEPENDENCIES
   unicorn
   validates_email_format_of
   web-console (~> 2.0)
+  will_paginate-bootstrap
   wrong
 
 BUNDLED WITH

@@ -8,6 +8,9 @@ en:
       form:
         login: 'Login'
         go_to_register: 'Register'
+    gists:
+      index:
+        signature: 'Posted by: %{author}'
   layouts:
     superhero:
       login: 'Login'
