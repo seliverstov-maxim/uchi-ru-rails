@@ -9,9 +9,24 @@ en:
         login: 'Login'
         go_to_register: 'Register'
     gists:
-      index:
+      show:
+        author: 'Posted by: %{author}'
+        edit_gist: 'Edit gist'
+        remove_gist: 'Remove gist'
+        confirm_delete: 'Are you sure?'
+        comment_signature: 'Posted by: %{author}'
+        create_comment: 'Create comment'
+        add_comment: 'Add comment'
+    shared:
+      gist_collection:
         signature: 'Posted by: %{author}'
+    user:
+      gists:
+        form:
+          create: 'Create gist'
   layouts:
     superhero:
       login: 'Login'
       logout: 'Logout'
+      my_gists: 'My gists'
+      logo: 'Gists uchi.ru'

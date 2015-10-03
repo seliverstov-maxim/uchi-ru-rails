@@ -26,5 +26,6 @@ module UchiRails
     config.autoload_paths += %W(#{config.root}/app/types)
     config.autoload_paths += %W(#{config.root}/app/services)
     config.autoload_paths += %W(#{config.root}/lib)
+    config.autoload_paths += %W(#{config.root}/app/repositories)
   end
 end

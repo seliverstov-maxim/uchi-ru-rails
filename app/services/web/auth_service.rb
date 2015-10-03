@@ -8,7 +8,7 @@ module Web::AuthService
   end
 
   def current_user
-    return User.find_by(id: session[:current_user_id]) if session[:current_user_id].present?
+    return ::User.find_by(id: session[:current_user_id]) if session[:current_user_id].present?
     nil
   end
 end

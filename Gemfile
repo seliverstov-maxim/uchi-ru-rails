@@ -17,9 +17,13 @@ gem 'therubyracer'
 gem 'twitter-bootswatch-rails', '~> 3.3.4'
 gem 'twitter-bootswatch-rails-helpers'
 gem 'will_paginate-bootstrap'
+gem 'jquery-dotdotdot-rails'
 
 gem 'validates_email_format_of'
 gem 'enumerize'
+gem 'coderay'
+gem 'draper'
+gem 'state_machines-activerecord'
 
 group :development, :test do
   gem 'byebug'

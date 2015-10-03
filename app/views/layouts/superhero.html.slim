@@ -12,21 +12,21 @@ html(lang="en")
     = stylesheet_link_tag "superhero", :media => "all"
     = yield(:page_stylesheet) if content_for?(:page_stylesheet)
 
-
   body
     .navbar.navbar-default
-      .container-fluid
+      .container
         .navbar-header
           button.navbar-toggle type="button" data-toggle="collapse" data-target="#navbar-main-collapsed"
             span.sr-only= 'Toggle navigation'
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand= 'Gists uchi.ru'
+          = link_to t('.logo'), gists_path, class: 'navbar-brand'
         .collapse.navbar-collapse id='navbar-main-collapsed'
           ul.nav.navbar-nav
             li.acitve
-              a= 'first'
+              - if current_user.present?
+                = link_to t('.my_gists'), user_gists_path
             li
               a= 'second'
           form.navbar-form.navbar-left.inline-form

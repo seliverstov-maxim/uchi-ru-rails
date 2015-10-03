@@ -4,8 +4,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :password_digest
       t.string :avatar
-
-      t.timestamp
+      t.string :state
+      t.datetime :deleted_at
     end
   end
 end

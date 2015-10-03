@@ -1,0 +1,16 @@
+div
+  .pull-left
+    h4= t('.author', author: @gist.owner.email)
+  .pull-right
+    => link_to t('.edit_gist'), edit_user_gist_path(@gist.id), class: 'btn btn-default'
+    => link_to t('.remove_gist'), user_gist_path(@gist.id), class: 'btn btn-default', remote: true, method: :delete, confirm: t('.confirm_delete')
+  .clearfix
+h2= @gist.description
+
+.souce_code.CodeRay
+  == @gist.highlighted_content
+
+.comments
+  = render partial: 'comments/comment_list', locals: { comments: @gist.comments }
+  .add_comment_form
+    = render partial: 'comments/form', locals: { comment: :comment }

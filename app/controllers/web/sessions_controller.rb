@@ -5,7 +5,6 @@ class Web::SessionsController < Web::ApplicationController
 
   def create
     auth_user = Web::AuthUserType.find_by(email: user_params[:email])
-    p !!auth_user.try(:authenticate, user_params[:password])
     if auth_user.try(:authenticate, user_params[:password])
       sign_in(auth_user)
       redirect_to root_path, notice: t('.success_auth')

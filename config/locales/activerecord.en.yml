@@ -1,5 +1,8 @@
 en:
   activerecord:
+    attributes:
+      gist:
+        public: 'Should gist be public?'
     errors:
       models:
         web/registration_user_type:

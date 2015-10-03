@@ -1,0 +1,6 @@
+= simple_form_for [:user, gist] do |f|
+  = f.input :description
+  = f.input :content, input_html: { class: 'large-text-input' }
+  = f.input :public, as: :boolean
+  = f.input :language, as: :select, collection: gist_languages_collection
+  = f.submit t('.create'), class: 'btn btn-success'

@@ -3,24 +3,45 @@ a.gist-link, a.gist-link:hover {
   text-decoration: none;
 }
 
-.owner-pic {
-  background-color: #AAA;
-  width: 100px;
-  height: 100px;
-  float: left;
-  margin: 0 15px 15px 0;
-
-  .img {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-p.gist-name {
+p.gist-description {
   font-size: 16px;
   font-weight: bold;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
 }
 
 .gists-pagination {
   text-align: center;
+}
+
+.souce_code {
+  min-height: 200px;
+  background-color: #FFF;
+
+  .CodeRay {
+    width: 100%;
+    background-color: #FFF;
+    min-height: 200px;
+    border: none;
+
+    pre {
+      background-color: #FFF;
+      border: none;
+    }
+  }
+}
+
+textarea.large-text-input {
+  height: 300px;
+}
+
+.comments {
+  border-top: 1px solid #fff;
+  margin-top: 20px;
+  padding-top: 20px;
+
+  .item {
+    margin-bottom: 20px;
+  }
 }

@@ -8,7 +8,7 @@ class Web::SessionsControllerTest < ActionController::TestCase
 
   test 'get auth form' do
     get :new
-    assert { response.success? }
+    assert_response :success
   end
 
   test 'create session' do

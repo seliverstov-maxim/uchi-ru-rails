@@ -7,7 +7,7 @@ class Web::UsersControllerTest < ActionController::TestCase
 
   test 'get user form' do
     get :new
-    assert { response.success? }
+    assert_response :success
   end
 
   test 'create user' do
