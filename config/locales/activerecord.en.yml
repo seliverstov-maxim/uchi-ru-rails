@@ -3,9 +3,3 @@ en:
     attributes:
       gist:
         public: 'Should gist be public?'
-    errors:
-      models:
-        web/registration_user_type:
-          attributes:
-            email:
-              not_email_format: 'Not email format'

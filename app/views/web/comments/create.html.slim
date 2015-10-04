@@ -1,1 +1,1 @@
-= render partial: 'comment', locals: { comment: :comment }
+= render partial: 'form', locals: { comment: @comment, url: gist_comments_path(@gist) }

@@ -21,29 +21,33 @@ html(lang="en")
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          = link_to t('.logo'), gists_path, class: 'navbar-brand'
+          = link_to t('.logo'), root_path, class: 'navbar-brand'
         .collapse.navbar-collapse id='navbar-main-collapsed'
           ul.nav.navbar-nav
-            li.acitve
-              - if current_user.present?
-                = link_to t('.my_gists'), user_gists_path
             li
-              a= 'second'
-          form.navbar-form.navbar-left.inline-form
-            .form-group
-              input.form-control placeholder='Search phrase'
-            button.btn.btn-default type='submit'= 'Search'
+              = link_to t('.all_gists'), gists_path
+            li
+              - unless current_user.guest?
+                = link_to t('.my_gists'), user_gists_path
 
           ul.nav.navbar-nav.navbar-right
+            - unless current_user.guest?
+              li
+                = link_to t('.create_new_gist'), new_user_gist_path
+              li
+                a= current_user.email
             li
-              - if current_user.present?
-                = link_to t('.logout'), session_path, method: :delete
-              - else
+              - if current_user.guest?
                 = link_to t('.login'), new_session_path
-          - if current_user.present?
-            p.navbar-text.navbar-right.nav.navbar-nav
-              = current_user.email
+              - else
+                = link_to t('.logout'), session_path, method: :delete
+            li
+              - if I18n.locale == :ru
+                = link_to 'EN', url_for(locale: :en)
+              - else
+                = link_to 'RU', url_for(locale: :ru)
     .container
+      = bootswatch_flash
       = yield
 
     = javascript_include_tag "superhero"

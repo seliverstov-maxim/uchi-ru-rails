@@ -1,5 +1,9 @@
-- comments.each do |comment|
-  .well.item
-    p= comment.content
-    .signature= t('.comment_signature', author: comment.owner.email)
-.add_comment_form
+.comments_list
+  - comments.each do |comment|
+    .item
+      .well
+        p
+          span.signature>
+            = t('.comment_signature', author: comment.owner.email)
+          = comment.content
+

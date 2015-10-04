@@ -1,9 +1,12 @@
 div
   .pull-left
     h4= t('.author', author: @gist.owner.email)
+
   .pull-right
-    => link_to t('.edit_gist'), edit_user_gist_path(@gist.id), class: 'btn btn-default'
-    => link_to t('.remove_gist'), user_gist_path(@gist.id), class: 'btn btn-default', remote: true, method: :delete, confirm: t('.confirm_delete')
+    - if current_user.can_update?(@gist)
+      => link_to t('.edit_gist'), edit_user_gist_path(@gist.id), class: 'btn btn-default'
+    - if current_user.can_delete?(@gist)
+      => link_to t('.remove_gist'), user_gist_path(@gist.id), class: 'btn btn-default', method: :delete
   .clearfix
 h2= @gist.description
 
@@ -11,6 +14,7 @@ h2= @gist.description
   == @gist.highlighted_content
 
 .comments
-  = render partial: 'comments/comment_list', locals: { comments: @gist.comments }
+  .comment_list
+    = render partial: 'web/comments/comment_list', locals: { comments: @gist.comments }
   .add_comment_form
-    = render partial: 'comments/form', locals: { comment: :comment }
+    = render partial: 'web/comments/form', locals: { comment: :comment, url: gist_comments_path(@gist) }

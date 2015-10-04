@@ -1,3 +1,15 @@
+.gist-preview {
+    width: 33.3%;
+    folat: left;
+    float: left;
+    padding-right: 20px;
+}
+
+.gist-preview:nth-child(3n+3) {
+    padding-right: none;
+    padding-right: 0;
+}
+
 a.gist-link, a.gist-link:hover {
   color: #FFF;
   text-decoration: none;
@@ -38,10 +50,14 @@ textarea.large-text-input {
 
 .comments {
   border-top: 1px solid #fff;
-  margin-top: 20px;
+  margin: 20px 0;
   padding-top: 20px;
 
   .item {
     margin-bottom: 20px;
+
+    .signature {
+      font-weight: bold;
+    }
   }
 }

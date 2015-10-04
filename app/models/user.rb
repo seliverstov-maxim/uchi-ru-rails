@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   include UserRepository
+  include Authority::UserAbilities
 
   has_many :gists, foreign_key: 'owner_id'
 
@@ -28,4 +29,8 @@ class User < ActiveRecord::Base
   end
 
   include StateMachineScopes
+
+  def guest?
+    false
+  end
 end

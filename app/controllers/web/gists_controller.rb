@@ -4,11 +4,16 @@ class Web::GistsController < Web::ApplicationController
   end
 
   def show
-    gist = Gist.find(params[:id])
-    if gist.present? && (gist.owner == current_user || gist.public?)
-      @gist = Web::GistDecorator.new(gist)
-    else
-      redirect_to gists_path(gist), notice: t('.gist_not_allowed')
+    gist = Gist.active.find_by(id: params[:id])
+
+    if gist.blank?
+      flash[:error] = t('.gist_not_found')
+      redirect_to gists_path(gist)
+      return
     end
+
+    authorize_action_for gist
+
+    @gist = Web::GistDecorator.new(gist)
   end
 end

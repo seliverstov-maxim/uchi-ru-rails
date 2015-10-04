@@ -1,0 +1,5 @@
+|var form = "#{j render partial: 'form', locals: { comment: @comment, url: gist_comments_path(@gist) }}";
+|var comments = "#{j render partial: 'comment_list', locals: { comments: @gist.comments }}";
+
+|$('.comment_list').html(comments);
+|$('.add_comment_form').html(form);

@@ -1,11 +1,12 @@
-- gists.each do |gist|
-  .col-xs-4.gist-preview
-    = link_to gist_path(gist.id), class: 'gist-link' do
-      .panel.panel-default
-        .panel-body
-          p.gist-description.dotted= gist.description
-          span.about_autor
-            = t('.signature', author: gist.owner.email)
-.clearfix
-.gists-pagination
-  = will_paginate gists, renderer: BootstrapPagination::Rails, bootstrap: 3
+.gist_collection
+  - gists.each do |gist|
+    .gist-preview
+      = link_to gist_path(gist.id), class: 'gist-link' do
+        .panel.panel-default
+          .panel-body
+            p.gist-description.dotted= gist.description
+            span.about_autor
+              = t('.signature', author: gist.owner.email)
+  .clearfix
+  .gists-pagination
+    = will_paginate gists, renderer: BootstrapPagination::Rails, bootstrap: 3

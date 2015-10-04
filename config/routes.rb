@@ -3,11 +3,11 @@ Rails.application.routes.draw do
 
   scope module: :web do
     resources :gists, only: [:index, :show] do
-      resources :comments, only: [:index, :create]
+      resources :comments, only: [:create]
     end
     resource :welcome, only: [:show]
     resource :session, only: [:new, :create, :destroy]
-    resource :user, only: [:new, :create, :edit, :update]
+    resource :user, only: [:new, :create]
     namespace :user do
       resources :gists, only: [:index, :new, :create, :edit, :update, :destroy]
     end

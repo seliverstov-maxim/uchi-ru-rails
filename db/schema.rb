@@ -24,12 +24,12 @@ ActiveRecord::Schema.define(version: 20151003223457) do
   end
 
   create_table "gists", force: :cascade do |t|
-    t.text     "description"
-    t.text     "content"
+    t.boolean  "public",      default: false
     t.integer  "owner_id"
     t.string   "language"
-    t.string   "public",      default: "f"
     t.string   "state"
+    t.text     "content"
+    t.text     "description"
     t.datetime "deleted_at"
   end
 

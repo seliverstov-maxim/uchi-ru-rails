@@ -1,0 +1,76 @@
+ru:
+  web:
+    users:
+      form:
+        login: 'Авторизоваться'
+        register: 'Зарегистрироваться'
+      create:
+        success_signup: 'Регистрация прошла успешно'
+        fail_signup: 'Ошибка. Вы не были зарегистрированы'
+        register_please: 'Зарегистрируйтесь пожалуйста'
+      new:
+        register_please: 'Зарегистрируйтесь пожалуйста'
+    sessions:
+      form:
+        login: 'Авторизоваться'
+        go_to_register: 'Зарегистрироваться'
+      destroy:
+        success_logout: 'Вы успешно вышли'
+      new:
+        auth_please: 'Авторизуйтесь пожалуйста'
+      create:
+        auth_please: 'Авторизуйтесь пожалуйста'
+    gists:
+      index:
+        gist_not_allowed: 'Гист не доступен'
+        all_gists: 'Все гисты'
+      show:
+        author: 'Автор: %{author}'
+        edit_gist: 'Редактировать гист'
+        remove_gist: 'Удалить гист'
+        gist_not_found: 'Гист не найден'
+        back: 'Назад'
+    shared:
+      gist_collection:
+        signature: 'Автор: %{author}'
+    user:
+      gists:
+        form:
+          back: 'Назад'
+        index:
+          my_gists: 'Mои гисты'
+        create:
+          success_gist_creation: 'Гист был успешно создан'
+          failed_gist_creation: 'Гист не был создан'
+        edit:
+          gist_not_found: 'Гист не найден'
+        update:
+          gist_not_found: 'Гист не найден'
+          success_gist_update: 'Гист был успешно обновлен'
+          failed_gist_update: 'Гист не был обновлен'
+        destroy:
+          gist_not_found: 'Гист не найден'
+          success_gist_deleted: 'Гист был удален успешно'
+          failed_gist_deleted: 'Гист не был удален'
+    comments:
+      form:
+        add_comment: 'Добавить комментарий'
+        create_comment: 'Создать комментарий'
+      comment_list:
+        comment_signature: '%{author}:'
+      create:
+        failed_comment_creation: 'Комментарий был успешно создан'
+        success_comment_creation: 'Комментарий не был создан'
+    welcome:
+      show:
+        welcome_header: 'Проект разработан специально для uchi.ru'
+        welcome_description: 'Задача:'
+        project_author: 'Автор проекта: Селиверстов Максим (maxim.web.developer@gmail.com)'
+  layouts:
+    superhero:
+      login: 'Авторизоваться'
+      logout: 'Выйти'
+      my_gists: 'Мои гисты'
+      all_gists: 'Все гисты'
+      logo: 'Gists uchi.ru'
+      create_new_gist: 'Создать новый гист'

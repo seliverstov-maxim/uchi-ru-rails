@@ -8,7 +8,12 @@ module Web::AuthService
   end
 
   def current_user
-    return ::User.find_by(id: session[:current_user_id]) if session[:current_user_id].present?
-    nil
+    @current_user if @current_user.present?
+    user = ::User.find_by(id: session[:current_user_id]) if session[:current_user_id].present?
+    user ||= ::AnonumousUser.new
+  end
+
+  def authorized?
+    return redirect_to root_path if current_user.guest?
   end
 end

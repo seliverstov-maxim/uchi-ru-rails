@@ -4,29 +4,70 @@ en:
       form:
         login: 'Login'
         register: 'Register'
+      create:
+        success_signup: 'You have been signup successfuly'
+        fail_signup: 'You have not been signup.'
+        register_please: 'Register please'
+      new:
+        register_please: 'Register please'
     sessions:
       form:
         login: 'Login'
         go_to_register: 'Register'
+      destroy:
+        success_logout: 'You have been logout successfuly'
+      new:
+        auth_please: 'Auth please'
+      create:
+        auth_please: 'Auth please'
     gists:
+      index:
+        gist_not_allowed: 'Gist not allowed'
+        all_gists: 'All gists'
       show:
         author: 'Posted by: %{author}'
         edit_gist: 'Edit gist'
         remove_gist: 'Remove gist'
-        confirm_delete: 'Are you sure?'
-        comment_signature: 'Posted by: %{author}'
-        create_comment: 'Create comment'
-        add_comment: 'Add comment'
+        gist_not_found: 'Gist not found'
     shared:
       gist_collection:
         signature: 'Posted by: %{author}'
     user:
       gists:
-        form:
-          create: 'Create gist'
+        index:
+          my_gists: 'My gists'
+        create:
+          success_gist_creation: 'Gist has been created successfuly'
+          failed_gist_creation: 'Gist has not been created'
+        edit:
+          gist_not_found: 'Gist not found'
+        update:
+          gist_not_found: 'Gist not found'
+          success_gist_update: 'Gist has been updated successfuly'
+          failed_gist_update: 'Gist has not been updated'
+        destroy:
+          gist_not_found: 'Gist not found'
+          success_gist_deleted: 'Gist has been removed successfuly'
+          failed_gist_deleted: 'Gist has not been removed'
+    comments:
+      form:
+        add_comment: 'Add comment'
+        create_comment: 'Create comment'
+      comment_list:
+        comment_signature: '%{author}:'
+      create:
+        failed_comment_creation: 'Comment has been created successfuly'
+        success_comment_creation: 'Comment has not been created'
+    welcome:
+      show:
+        welcome_header: 'Project developed specially for uchi.ru'
+        welcome_description: 'Task:'
+        project_author: 'Project author: Seliverstov Maxim (maxim.web.developer@gmail.com)'
   layouts:
     superhero:
       login: 'Login'
       logout: 'Logout'
       my_gists: 'My gists'
+      all_gists: 'All gists'
       logo: 'Gists uchi.ru'
+      create_new_gist: 'Create new gist'

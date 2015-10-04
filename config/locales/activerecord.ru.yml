@@ -1,0 +1,11 @@
+ru:
+  activerecord:
+    attributes:
+      gist:
+        public: 'Смогут ли видеть гист другие участники?'
+    errors:
+      models:
+        web/registration_user_type:
+          attributes:
+            email:
+              invalid_email_address: 'Не соответсвтует формату почтового адреса'
