@@ -3,3 +3,10 @@ input[type="radio"], input[type="checkbox"] { margin: 0 }
 * { font-size: 17px; }
 
 .label { font-weight: bold; padding: 7px; }
+
+.form-control {
+  &::-webkit-input-placeholder { color:#888; }
+  &::-moz-placeholder          { color:#888; }
+  &:-moz-placeholder           { color:#888; }
+  &:-ms-input-placeholder      { color:#888; }
+}
