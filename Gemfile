@@ -28,16 +28,13 @@ gem 'draper'
 gem 'state_machines-activerecord'
 gem 'russian', '~> 0.6.0'
 
-group :development, :test do
-  gem 'byebug'
-end
-
 group :test do
   gem 'wrong'
   gem 'factory_girl_rails'
 end
 
 group :development do
+  gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'capistrano-rails'
