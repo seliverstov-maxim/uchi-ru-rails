@@ -7,4 +7,4 @@ script:
 before_script:
   - RAILS_ENV=test bundle exec rake db:create db:migrate
 before_install:
-  - rvm use ruby-2.1.1 --fuzzy
+  - rvm install ruby-2.1.1
