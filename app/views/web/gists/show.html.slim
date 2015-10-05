@@ -13,10 +13,10 @@ h2= @gist.description
 .souce_code.CodeRay
   == @gist.highlighted_content
 
-- if @gist.comments.present? || current_user.can_update?(@gist)
+- if @gist.comments.present? || current_user.can_create?(Comment)
   .comments
     .comment_list
       = render partial: 'web/comments/comment_list', locals: { comments: @gist.comments }
-    - if current_user.can_update?(@gist)
+    - if current_user.can_create?(Comment)
       .add_comment_form
         = render partial: 'web/comments/form', locals: { comment: :comment, url: gist_comments_path(@gist) }
