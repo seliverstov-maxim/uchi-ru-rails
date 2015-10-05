@@ -9,6 +9,7 @@ class Web::SessionsController < Web::ApplicationController
       sign_in(auth_user)
       redirect_to user_gists_path, notice: t('.success_auth')
     else
+      flash.now[:error] = t('.fail_auth')
       @user = Web::AuthUserType.new(user_params)
     end
   end

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Web::GistsControllerTest < ActionController::TestCase
   def setup
-    @gist = create :gist
+    @gist = create :gist, public: true
   end
 
   test 'get index gists' do

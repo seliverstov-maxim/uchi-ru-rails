@@ -10,7 +10,8 @@ class Web::ApplicationController < ApplicationController
 
   def authority_forbidden(error)
     Authority.logger.warn(error.message)
-    redirect_to request.referrer.presence || root_path, :error => 'You are not authorized to complete that action.'
+    flash[:error] = t('authority.not_authorized')
+    redirect_to request.referrer.presence || root_path
   end
 
   def default_url_options

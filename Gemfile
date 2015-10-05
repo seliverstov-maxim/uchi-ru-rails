@@ -45,3 +45,7 @@ group :development do
   gem 'pry-rails'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+

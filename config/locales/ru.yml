@@ -1,4 +1,6 @@
 ru:
+  authority:
+    not_authorized: 'У вас не достаточно прав.'
   web:
     users:
       form:
@@ -7,9 +9,9 @@ ru:
       create:
         success_signup: 'Регистрация прошла успешно'
         fail_signup: 'Ошибка. Вы не были зарегистрированы'
-        register_please: 'Зарегистрируйтесь пожалуйста'
+        register_please: 'Пожалуйста, зарегистрируйтесь'
       new:
-        register_please: 'Зарегистрируйтесь пожалуйста'
+        register_please: 'Пожалуйста, зарегистрируйтесь'
     sessions:
       form:
         login: 'Авторизоваться'
@@ -17,9 +19,11 @@ ru:
       destroy:
         success_logout: 'Вы успешно вышли'
       new:
-        auth_please: 'Авторизуйтесь пожалуйста'
+        auth_please: 'Пожалуйста, авторизуйтесь'
       create:
-        auth_please: 'Авторизуйтесь пожалуйста'
+        auth_please: 'Пожалуйста, авторизуйтесь'
+        success_auth: 'Авторизация прошла успешно'
+        fail_auth: 'Пользователь с таким email и парольем не найден'
     gists:
       index:
         gist_not_allowed: 'Гист не доступен'
@@ -29,14 +33,11 @@ ru:
         edit_gist: 'Редактировать гист'
         remove_gist: 'Удалить гист'
         gist_not_found: 'Гист не найден'
-        back: 'Назад'
     shared:
       gist_collection:
         signature: 'Автор: %{author}'
     user:
       gists:
-        form:
-          back: 'Назад'
         index:
           my_gists: 'Mои гисты'
         create:

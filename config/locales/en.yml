@@ -1,4 +1,6 @@
 en:
+  authority:
+    not_authorized: 'You are not authorized to complete that action.'
   web:
     users:
       form:
@@ -20,6 +22,8 @@ en:
         auth_please: 'Auth please'
       create:
         auth_please: 'Auth please'
+        success_auth: 'You have been signup successfuly'
+        fail_auth: 'Auth error, user with this email and password does not exists'
     gists:
       index:
         gist_not_allowed: 'Gist not allowed'

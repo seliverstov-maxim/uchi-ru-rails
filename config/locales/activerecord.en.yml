@@ -1,5 +1,10 @@
 en:
   activerecord:
+    models:
+      gist: 'гист'
     attributes:
       gist:
+        description: 'Description'
+        content: 'Source code'
+        language: 'Language'
         public: 'Should gist be public?'

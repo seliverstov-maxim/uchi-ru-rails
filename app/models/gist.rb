@@ -3,7 +3,7 @@ class Gist < ActiveRecord::Base
   include Authority::Abilities
 
   belongs_to :owner, class_name: 'User'
-  has_many :comments, as: :commentable, class_name: 'Comment'
+  has_many :comments, as: :commentable, class_name: 'Comment', dependent: :delete_all
 
   validates :owner, presence: true
   validates :language, presence: true

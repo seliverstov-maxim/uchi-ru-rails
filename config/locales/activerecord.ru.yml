@@ -1,7 +1,12 @@
 ru:
   activerecord:
+    models:
+      gist: 'гист'
     attributes:
       gist:
+        description: 'Описание гиста'
+        content: 'Исходный код'
+        language: 'Язык'
         public: 'Смогут ли видеть гист другие участники?'
     errors:
       models:
