@@ -24,4 +24,4 @@
 - Несколько файлов на один гист.
 - Расширить количество языков.
 
-[Demo тут](https://uchi-ru.herokuapp.com)
+[Демо-версия](https://uchi-ru.herokuapp.com)
