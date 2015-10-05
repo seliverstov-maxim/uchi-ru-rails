@@ -7,4 +7,5 @@ class Comment < ActiveRecord::Base
 
   validates :commentable, presence: true
   validates :owner, presence: true
+  validates :content, presence: true
 end
