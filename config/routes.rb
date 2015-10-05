@@ -12,4 +12,6 @@ Rails.application.routes.draw do
       resources :gists, only: [:index, :new, :create, :edit, :update, :destroy]
     end
   end
+
+  match '*unmatched_route', to: 'web/welcome#show', via: :all
 end
