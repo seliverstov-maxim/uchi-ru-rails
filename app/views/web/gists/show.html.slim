@@ -13,8 +13,10 @@ h2= @gist.description
 .souce_code.CodeRay
   == @gist.highlighted_content
 
-.comments
-  .comment_list
-    = render partial: 'web/comments/comment_list', locals: { comments: @gist.comments }
-  .add_comment_form
-    = render partial: 'web/comments/form', locals: { comment: :comment, url: gist_comments_path(@gist) }
+- if @gist.comments.present? || current_user.can_update?(@gist)
+  .comments
+    .comment_list
+      = render partial: 'web/comments/comment_list', locals: { comments: @gist.comments }
+    - if current_user.can_update?(@gist)
+      .add_comment_form
+        = render partial: 'web/comments/form', locals: { comment: :comment, url: gist_comments_path(@gist) }
