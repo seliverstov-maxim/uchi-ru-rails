@@ -1,0 +1,4 @@
+rvm:
+  - 2.1.1
+  - ruby
+script: "bundle exec rake test"
